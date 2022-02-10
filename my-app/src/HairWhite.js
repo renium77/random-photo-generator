@@ -2,12 +2,12 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import Footer from './Footer';
 
-function Hero() {
+function HairWhite() {
 
     const [image, setImage] = useState('')
 
     const handelChange = () => {
-        axios.get(`https://api.generated.photos/api/v1/faces?api_key=xC0YmHpB1uXHgygv5eFA8w&order_by=random`)
+        axios.get(`https://api.generated.photos/api/v1/faces?api_key=xC0YmHpB1uXHgygv5eFA8w&hair_color=white`)
     
     .then(res => {
         const uri = res.data.faces[0].urls[4][512];
@@ -29,9 +29,8 @@ function Hero() {
         </div>
         <Footer/>
     </div>
-    
 
   )
 }
 
-export default Hero
+export default HairWhite
